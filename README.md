@@ -1,4 +1,9 @@
 # f03lipe/tiny-lisp
+
+A very **very tiny** **EXCRUCIATINGLY SMALL** (OK... maybe not THAT small: ~75 lines) interpreter for a minimal **lisp dialect**.
+
+![](http://i.imgur.com/EgtTvTg.jpg)
+
 ### What is this for?
 Nothing, obviously.
 
@@ -35,9 +40,13 @@ MIT License.
 >> (list "a "3)
 ("a", 3)
 ```
-### Assigning: `define`s at the beggining of any block (evaluating last element)
+### Assigning: `define`s at the beggining of any block (evaluating to last element)
 ```lisp
 >> (+ ((define a 3) (* 10 a)) 5)
 35
 ```
-
+#### To define procedures, use `lambda`
+```lisp
+>> ((define pow (lambda (x n) (cond ((= n 1) x) (else (* x (pow x (- n 1))))))) (pow 2 4))
+16.0
+```
