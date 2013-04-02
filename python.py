@@ -61,9 +61,6 @@ def eval(exp, env):
 		if exp[0] in ('\'', '\"'): # Quoted name.
 			return exp.replace('\'', '')
 		else: # It's a symbol => lookup it up.
-			# print("Looking up %s in %s" % (exp, env.keys()))
-			if not env.get(exp):
-	 			return lib[exp]
 			return env[exp]
 
 def apply(proc, args, env): # Apply the procedure to evaluated args.
@@ -71,8 +68,7 @@ def apply(proc, args, env): # Apply the procedure to evaluated args.
 	return proc(*args)
 
 if __name__ == "__main__":
-	s = input('>> ') or '((define pow (lambda (x n) (cond ((= n 1) x) (else (* '\
-	'x (pow x (- n 1))))))) (pow 2 3))' 
+	s = input('>> ') or '((define pow (lambda (x n) (cond ((= n 1) x) (else (* x (pow x (- n 1))))))) (pow 2 3))'
 
 	from lib import lib
-	print(eval(tokenize(s), dict()))
+	print(eval(tokenize(s), lib.copy()))
