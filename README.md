@@ -4,6 +4,8 @@ A very **very tiny** **EXCRUCIATINGLY SMALL** (OK... maybe not THAT small: ~75 l
 
 ![](http://i.imgur.com/EgtTvTg.jpg)
 
+#### To play with this, extend the primitive functions by editing `libs.py`.
+
 ### What is this for?
 Nothing, obviously.
 
