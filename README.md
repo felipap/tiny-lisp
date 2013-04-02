@@ -27,7 +27,10 @@ MIT License.
 ```
 ### Conditions: `cond`
 ```lisp
->> ((λ (x) (cond ((% x 2) 'odd) (else 'even))) 4)
+>> ((λ (x)
+       (cond  ((% x 2) 'odd)
+              (else 'even)))
+    4)
 'even
 ```
 ### Literals: `'`
@@ -45,8 +48,13 @@ MIT License.
 >> (+ ((define a 3) (* 10 a)) 5)
 35
 ```
-#### To define procedures, use `lambda`
+### To define procedures, use `lambda`
 ```lisp
->> ((define pow (lambda (x n) (cond ((= n 1) x) (else (* x (pow x (- n 1))))))) (pow 2 4))
+>> ((define pow
+            (lambda (x n)
+                    (cond ((= n 1) x)
+                          (else (* x (pow x (- n 1))))
+                    )))
+    (pow 2 4))
 16.0
 ```
