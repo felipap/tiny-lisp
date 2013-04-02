@@ -1,6 +1,8 @@
 # f03lipe/tiny-lisp
 
-A tiny **TINY** *REEEEALY TINY* interpreter for a lisp-like language.<br>
+A very **very tiny** **EXCRUCIATINGLY SMALL** (OK... maybe not THAT small: ~75 lines) interpreter for a minimal **lisp dialect**.
+
+![](http://i.imgur.com/EgtTvTg.jpg)
 
 ### What is this for?
 Nothing, obviously.
