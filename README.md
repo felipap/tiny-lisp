@@ -4,12 +4,17 @@ A very **very tiny** **EXCRUCIATINGLY SMALL** (OK... maybe not THAT small: ~75 l
 
 ![](http://i.imgur.com/EgtTvTg.jpg)
 
+The fork won't hurt ya! Feel free to send a pull request.
+
+
+## Usage
+
 #### To play with this, extend the primitive functions by editing `libs.py`.
 
-### What is this for?
+## What is this for?
 Nothing, obviously.
 
-### License:
+## License
 MIT License.
 
 ## What is supported
@@ -60,3 +65,7 @@ MIT License.
     (pow 2 4))
 16.0
 ```
+
+## Wanna Help?
+
+You can help by extending the libs.py to support more functions. Or optimize the interpreter.
